@@ -242,7 +242,7 @@ h2 {
   display: flex;
   align-items: flex-start;
   margin-bottom: 20px;
-  padding: 20px;
+  padding-left: 20px;
 }
 
 .skills-text {
@@ -250,10 +250,16 @@ h2 {
   line-height: normal;
   font-size: 16px;
   margin-right: 20px;
+  flex: 1;
 }
 
 .skills-text h2 {
   font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.skills-text p {
+  margin-bottom: 10px;
 }
 
 .skill-bars {
@@ -261,39 +267,87 @@ h2 {
   flex-direction: column;
   gap: 20px;
   align-items: flex-start;
+  justify-content: flex-start;
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-left: 20px;
 }
 
-.skill-bar-label {
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: white;
+.skill-bar {
+  position: relative;
 }
 
 .progress {
   width: 200px;
   height: 20px;
-  background-color: var(--color-light-background);
+  background-color: var(--color-secondary);
   border-radius: 10px;
   overflow: hidden;
+  margin-bottom: 10px;
 }
 
 .progress-value {
   height: 100%;
+  transition: width 0.3s ease-in-out;
+}
+
+.progress-value.strong-style{
+  background-color: greenyellow;
+}
+
+.progress-value.savvy {
+  background-color: orange;
+}
+
+.progress-value.apprentice{
+  background-color: red;
+}
+
+
+.progress-label {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  color: var(--color-notification);
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 20px;
 }
 
 .skill-icons {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 10px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.skill-icons li {
-  display: inline-flex;
+.icon-item {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  color: var(--color-primary);
-  font-size: 14px;
-  margin-right: 20px;
+  color: var(--color-light-background);
+  font-size: 3rem;
+  margin-bottom: 5px;
+}
+
+.icon-item i {
+  margin-bottom: 5px;
+}
+
+.icon-text {
+  text-align: center;
+  font-size: 10px;
+}
+
+@media (max-width: 768px) {
+  .skills {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .skill-bars {
+    margin-top: 20px;
+  }
 }
