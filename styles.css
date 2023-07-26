@@ -41,13 +41,14 @@
   }
   
   .greeting-text {
-    color: var(--color-primary);
+    color: var(--color-light-background);
     line-height: 40px;
     font-size: 20px;
   }
   
   .greeting-text h1{
     font-size: 50px;
+    color: var(--color-interactive);
   }
 
   .greeting {
@@ -71,13 +72,13 @@ h2 {
   position: relative;
   margin: 0 10px;
   text-decoration: none;
-  color: var(--color-interactive);
+  color: var(--color-primary);
   font-weight: bold;
   font-size: 16px;
 }
 
 .navigation a:hover {
-    color: var(--color-critical);
+    color: var(--color-highlight);
 }
 
 .navigation a:before {
@@ -87,7 +88,7 @@ h2 {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: var(--color-critical);
+  background-color: var(--color-primary);
   transition: width 0.3s ease-in-out;
 }
 
@@ -139,9 +140,9 @@ h2 {
   }
   
   .main-button {
-    background-color: var(--color-notification);
+    background-color: var(--color-interactive);
     color: var(--color-primary);
-    border: 1px solid var(--color-notification);
+    border: 1px solid var(--color-interactive);
     font-weight: 700;
     padding: 13px 22px;
     margin-right: 50px;
@@ -158,7 +159,8 @@ h2 {
 
   .main-button:hover {
     background-color: var(--color-primary);
-    color: var(--color-notification)
+    color: var(--color-interactive);
+    border-color: var(--color-primary);
   }
   
   .greeting-image {
@@ -204,19 +206,19 @@ h2 {
 
 .about-text {
   flex: 1;
-  color: var(--color-primary);
+  color: var(--color-light-background);
   line-height: normal;
   font-size: 16px;
   margin-left: 20px;
 }
 
 .about-text a {
-    color: var(--color-interactive);
+    color: var(--color-primary);
     text-decoration: none;
 }
 
 .about-text a:hover{
-    color: var(--color-critical);
+    color: var(--color-interactive);
 }
 
 
@@ -260,6 +262,7 @@ h2 {
 
 .skills-text p {
   margin-bottom: 10px;
+  color: var(--color-light-background);
 }
 
 .skill-bars {
@@ -373,7 +376,7 @@ h2 {
   box-shadow: 0 10px 30px -15px var(--color-light-background);
   transition: all .25s ease;
   background-color: var(--color-dark-background);
-  color: var(--color-primary);
+  color: var(--color-light-background);
 }
 
 .project-image {
@@ -398,6 +401,7 @@ h2 {
   line-height: 24px;
   font-weight: 700;
   margin: 15px 0 0;
+  color: var(--color-interactive);
 }
 
 .project-description {
@@ -406,7 +410,8 @@ h2 {
 }
 
 .project-tag {
-  background: var(--color-notification);
+  background: var(--color-interactive);
+  color: var(--color-primary);
   vertical-align: middle;
   align-items: center;
   border-radius: 8px;
@@ -420,6 +425,12 @@ h2 {
   padding: 0.75em;
   cursor: pointer;
   transition: .2s ease-in;
+  text-decoration: none;
+}
+
+.project-tag:hover {
+  color: var(--color-interactive);
+  background-color: var(--color-primary);
 }
 
 .contact {
@@ -446,6 +457,10 @@ h2 {
   font-size: 40px;
   font-weight: 400;
   text-decoration: none;
+  color: var(--color-primary);
+}
+
+.contact-email:hover{
   color: var(--color-interactive);
 }
 
@@ -537,7 +552,7 @@ h2 {
   font-size: 14px;
   text-transform: uppercase;
   text-decoration: none;
-  color: #fff;
+  color: var(--color-critical);
   background-color: #000;
   border: none;
   border-radius: 4px;
@@ -550,7 +565,8 @@ h2 {
 }
 
 .system-reset-button:hover {
-  background-color: #444;
+  background-color: var(--color-critical);
+  color: black;
 }
 
 .system-reset-button:focus {
@@ -558,3 +574,33 @@ h2 {
 }
 
 /* Add the retro styling to the button */
+@media (max-width: 768px) {
+  .contact {
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+
+  .contact-details h2 {
+    font-size: 32px;
+  }
+
+  .contact-email {
+    font-size: 20px;
+  }
+
+  .social-icons.contact {
+    margin-top: 10px;
+  }
+
+  .contact-image {
+    max-width: 300px;
+  }
+
+  .contact-image-label {
+    font-size: 14px;
+  }
+
+  .system-reset-button {
+    font-size: 12px;
+  }
+}
