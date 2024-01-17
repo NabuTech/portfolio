@@ -1,0 +1,72 @@
+@import 'reset';
+@import 'mixins';
+@import 'variables';
+@import 'typography';
+@import 'layout';
+@import './components/greeting';
+@import './components/about';
+@import './components/logo';
+@import './components/skills';
+@import './components/my-projects';
+@import './components/contact';
+@import './components/animations';
+@import './components/reset-button';
+
+
+body {
+    margin: 0;
+    background-color: $color-dark-background;
+    width: 90%;
+    padding: 20px 10px;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 10px;
+    line-height: normal;
+    justify-content: center; // Center icons horizontally
+    margin-bottom: 10px;
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        border-radius: 2.6rem;
+        font-size: 24px;
+        text-decoration: none;
+        color: white;
+        padding-top: 10px; // Add padding to the top
+
+        &.github {
+            background-color: #211F1F;
+        }
+
+        &.linkedin {
+            background-color: #0A66C2;
+        }
+
+        &.twitter {
+            background-color: #1DA1F2;
+        }
+
+        &:hover {
+            opacity: 0.8;
+            background-color: $color-primary;
+        }
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: row; // Display in a row on smaller screens
+        align-items: center; // Center icons vertically
+    }
+
+    @media (min-width: 769px) {
+        justify-content: center; // Center icons horizontally in larger views
+    }
+}
+
+  @include media-query(768px) {
+    // Styles for 768px and below
+  }

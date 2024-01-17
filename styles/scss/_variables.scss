@@ -1,0 +1,41 @@
+/* _variables.scss */
+
+// Colors
+$color-primary: rgb(255, 255, 0);
+$color-secondary: rgb(192, 192, 192);
+$color-dark-background: rgb(0, 0, 51);
+$color-light-background: rgb(224, 224, 224);
+$color-highlight: rgb(0, 255, 255);
+$color-notification: rgb(75, 0, 130);
+$color-interactive: rgb(255, 0, 255);
+$color-critical: rgb(255, 0, 0);
+
+// Fonts
+$font-family-main: 'OCR A Std', 'Courier New', monospace;
+$font-family-header: 'Square Sans Serif 7', sans-serif;
+
+
+// Font sizes
+$font-size-base: 16px;
+$font-size-heading-1: 50px;
+$font-size-heading-2: 40px;
+$font-size-heading-3: 22px;
+$font-size-paragraph: 16px;
+
+// Line heights
+$line-height-base: 1.5;
+$line-height-heading: 1.2;
+
+// Font weights
+$font-weight-bold: bold;
+$font-weight-normal: normal;
+
+
+// Layout and Spacing
+$max-width: 90%;
+$padding-default: 20px;
+$border-radius: 10px;
+$margin-default: 20px;
+$border-radius-default: 10px;
+
+/* Add more variables as needed */

@@ -1,0 +1,28 @@
+h1 {
+    font-size: $font-size-heading-1;
+    line-height: $line-height-heading;
+    font-weight: $font-weight-bold;
+    color: $color-interactive;
+    vertical-align: middle;
+  }
+  
+  h2 {
+    font-size: $font-size-heading-2;
+    line-height: $line-height-heading;
+    font-weight: $font-weight-bold;
+    color: $color-highlight;
+    padding-bottom: 10px;
+  }
+  
+  h3 {
+    font-size: $font-size-heading-3;
+    line-height: $line-height-heading;
+    font-weight: $font-weight-bold;
+    color: $color-interactive;
+  }
+  
+  p {
+    font-size: $font-size-paragraph;
+    line-height: $line-height-base;
+    color: $color-light-background;
+  }
