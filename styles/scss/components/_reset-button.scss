@@ -1,0 +1,39 @@
+.system-reset-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: $font-size-base;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $color-critical;
+    background-color: #000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 100;
+  }
+  
+  .system-reset-button i {
+    margin-right: 5px;
+  }
+  
+  .system-reset-button:hover {
+    background-color: $color-critical;
+    color: black;
+    text-decoration: none;
+  }
+  
+  .system-reset-button:focus {
+    outline: none;
+  }
+
+@media (max-width: 768px){
+    .system-reset-button {
+        font-size: 12px;
+}
+}

@@ -1,0 +1,25 @@
+// _mixins.scss
+
+// Font Face Mixin
+@font-face {
+    font-family: 'Square Sans Serif 7';
+    src: url('../fonts/square_sans_serif_7.ttf') format('truetype')
+}
+
+  
+  // Hover Effect Mixin
+  @mixin hover-effect($property, $value, $hover-value) {
+    #{$property}: $value;
+    &:hover {
+      #{$property}: $hover-value;
+    }
+  }
+
+
+  // Media Query Mixin
+  @mixin media-query($breakpoint) {
+    @media (max-width: $breakpoint) {
+      @content;
+    }
+  }
+  

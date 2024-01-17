@@ -1,0 +1,114 @@
+/* _skills.scss */
+
+.skills {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: $margin-default;
+  padding-left: $padding-default;
+
+  .skills-text {
+      color: $color-primary;
+      font-size: 16px;
+      margin-right: $margin-default;
+      flex: 1;
+
+      h2 {
+          margin-bottom: 10px;
+      }
+
+      p {
+          margin-bottom: 10px;
+          color: $color-light-background;
+      }
+  }
+
+  .skill-bars {
+      display: flex;
+      flex-direction: column; 
+      gap: $padding-default;
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin-left: auto;
+      margin-top: auto;
+      margin-bottom: auto;
+      padding-left: $padding-default;
+
+      .skill-bar {
+          position: relative;
+
+          .progress {
+              width: 200px;
+              height: 20px;
+              background-color: $color-secondary;
+              border-radius: 10px;
+              overflow: hidden;
+              margin-bottom: 10px;
+
+              .progress-value {
+                  height: 100%;
+                  transition: width 0.3s ease-in-out;
+              }
+
+              .progress-label {
+                  position: absolute;
+                  top: 0;
+                  left: 10px;
+                  color: $color-notification;
+                  font-weight: bold;
+                  font-size: 12px;
+                  line-height: 20px;
+              }
+          }
+
+          .progress-value.strong-style {
+              background-color: greenyellow;
+          }
+
+          .progress-value.savvy {
+              background-color: orange;
+          }
+
+          .progress-value.apprentice {
+              background-color: red;
+          }
+      }
+
+      .skill-icons {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+          justify-content: space-between;
+          align-items: center;
+
+          .icon-item {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              color: $color-light-background;
+              font-size: 3rem;
+              margin-bottom: 5px;
+
+              i {
+                  margin-bottom: 5px;
+              }
+
+              .icon-text {
+                  text-align: center;
+                  font-size: 10px;
+              }
+          }
+      }
+  }
+
+  @media (max-width: 768px) {
+      flex-direction: column;
+
+      .skills {
+          align-items: center;
+
+      .skill-bars {
+          margin-top: $margin-default;
+      }
+    }
+  }
+}

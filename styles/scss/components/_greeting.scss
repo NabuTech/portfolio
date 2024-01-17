@@ -1,0 +1,130 @@
+/* _greeting.scss */
+
+$greeting-container-padding: $padding-default;
+$greeting-image-padding: 50px;
+
+.greeting-container {
+    padding: $greeting-container-padding; // Use variable for padding
+
+    .greeting {
+        display: flex;
+        flex-direction: column; // Stack on smaller screens
+
+        .greeting-left,
+        .greeting-right {
+            flex: 1;
+        }
+
+        .greeting-heading {
+            color: $color-light-background;
+        }
+    }
+
+    .greeting-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .greeting-text {
+        color: $color-light-background;
+        
+        p {
+            margin-bottom: 20px;
+        }
+    }
+
+    .navigation {
+        display: flex; // Display navigation in a row by default
+        justify-content: center;
+        text-transform: uppercase;
+        margin-bottom: 10px; // Add bottom margin to navigation
+
+        a {
+            position: relative;
+            margin: 0 10px;
+            text-decoration: none;
+            color: $color-primary;
+            font-weight: $font-weight-bold;
+            font-size: $font-size-base;
+
+            &:hover {
+                color: $color-highlight;
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                bottom: -2px;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background-color: $color-primary;
+                transition: width 0.3s ease-in-out;
+            }
+
+            &:hover:before {
+                width: 100%;
+            }
+        }
+    }
+
+    
+
+    .button-container {
+        display: flex;
+        flex-direction: column; // Stack items in a column
+        align-items: center; 
+    
+        .main-button {
+            background-color: $color-interactive;
+            color: $color-primary;
+            border: 1px solid $color-interactive;
+            font-weight: 700;
+            padding: 13px 22px;
+            text-transform: uppercase;
+            border-radius: 6px;
+            text-align: center;
+            text-decoration: none;
+            font-size: $font-size-base;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+    
+            &:hover {
+                background-color: $color-primary;
+                color: $color-interactive;
+                border-color: $color-primary;
+            }
+    
+            @media (min-width: 768px) {
+                align-self: center; // Align to the start (left) in larger views
+            }
+        }
+    }
+    
+    
+    
+    .greeting-image {
+        text-align: right;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: $border-radius;
+            padding: 20px; /* Adjust the padding as needed */
+        }
+    }
+
+
+    @media (max-width: 768px) {
+        .greeting-right {
+            display: none; // Hide image on smaller screens
+        }
+
+        .navigation,
+        .social-icons {
+            flex-direction: row; // Display in a row on smaller screens
+        }
+    }
+}

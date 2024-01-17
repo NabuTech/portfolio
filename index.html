@@ -2,46 +2,67 @@
 <html lang="en-US">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Portfolio</title>
-  <meta name="description" content="Free Web tutorials">
-  <meta name="keywords" content="HTML, CSS, JavaScript">
-  <meta name="author" content="John Doe">
+  <meta name="description" content="NabuTech - Creating exceptional digital experiences. Portfolio showcasing skills in full-stack development, programming languages, project management, and more.">
+  <meta name="keywords" content="NabuTech, portfolio, full-stack development, programming languages, project management, technology, software development">
+  <meta name="author" content="Sammy John Rawlinson">
   
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.13.0/css/all.min.css">
-  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="styles/css/main.css">
 
 </head>
 <body>
   
-	<section class="greeting">
-		<div class="greeting-text">
-		  <h1>This is <span class="Logo">NabuTech</span></h1>
-		  <p>Our mission is to create exceptional digital experiences. Whether you're a potential employer, interested in technology insights, seeking software solutions, or embarking on your own tech journey, NabuTech is here for you. We believe in sharing our journey, learnings, and mistakes to help others succeed. NabuTech is dedicated to never stop learning, growing, and innovating.</p>
-		  <nav class="navigation">
-			<a href="#about" onclick="scrollToAbout()">About</a>
-			<a href="#skills">Skills</a>
-			<a href="#projects">Projects</a>
-		  </nav>
-		  <div class="social-icons">
-			<a href="https://github.com/NabuTech" class="github">
-			  <i class="fab fa-github"></i>
-			</a>
-			<a href="https://www.linkedin.com/in/sammyjohnrawlinson" class="linkedin">
-			  <i class="fab fa-linkedin"></i>
-			</a>
-			<a href="https://twitter.com/nabu_tech" class="twitter">
-			  <i class="fab fa-twitter"></i>
-			</a>
-		  </div>
-		  <a class="main-button" href="#contact">Contact Me</a>
+	<section class="greeting-container">
+		<div class="greeting row">
+			<div class="greeting-left col-md-6">
+				<div class="greeting-heading">
+					<h1>This is <span class="Logo">NabuTech</span></h1>
+				</div>
+			</div>
 		</div>
-		<div class="greeting-image">
-			<img src="./images/neon-line-circuit-board-neon-digital-background-pink-neon-lines-modern-technology-printed-circuit-board.jpg" alt="Digital Circuit Board Background"/>
-		  </div>
-	  </section>
-
+		<div class="greeting-row">
+			<div class="greeting-left col-md-6">    
+				<div class="greeting-text">
+					<p>Our mission is to create exceptional digital experiences. Whether you're a potential employer, interested in technology insights, seeking software solutions, or embarking on your own tech journey, NabuTech is here for you. We believe in sharing our journey, learnings, and mistakes to help others succeed. NabuTech is dedicated to never stop learning, growing, and innovating.</p>
+					<nav class="navigation">
+						<a href="#about" onclick="scrollToAbout()">About</a>
+						<a href="#skills">Skills</a>
+						<a href="#projects">Projects</a>
+					</nav>
+					<div class="social-icons">
+						<a href="https://github.com/NabuTech" class="github">
+							<i class="fab fa-github"></i>
+						</a>
+						<a href="https://www.linkedin.com/in/sammyjohnrawlinson" class="linkedin">
+							<i class="fab fa-linkedin"></i>
+						</a>
+						<a href="https://twitter.com/nabu_tech" class="twitter">
+							<i class="fab fa-twitter"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="greeting-right col-md-6">
+				<div class="greeting-image">
+					<img src="./images/neon-line-circuit-board-neon-digital-background-pink-neon-lines-modern-technology-printed-circuit-board.jpg" alt="Digital Circuit Board Background"/>
+				</div>
+			</div>
+		</div>
+		<div class="greeting-row">
+			<div class="greeting-left col-md-6">
+			  <!-- New container for the button -->
+			  <div class="button-container text-md-right mt-3 mt-md-0">
+				<a class="main-button" href="#contact">Contact Me</a>
+			  </div>
+			</div>
+		  </div>    
+	</section>
+	
+	  
 	  <section class="about" id="about">
 		<div class="about-image">
 			<img src="./images/calabim.png" alt="Digital Mysterious Mad Hatter Profile Picture"/>
@@ -54,8 +75,8 @@
 			immersed myself in the world of software development, pursuing a Software Development
 			Diploma. Today, I continue to pursue my passion by working towards a bachelor's 
 			degree in IT and sharing my journey and accomplishments through NabuTech.</p>
-		  	<p>
-			To learn more about the person behind NabuTech, please visit my <a href="">LinkedIn</a> profile.
+		  	<p id="linkedin">
+			To learn more about the person behind NabuTech, please visit my <a href="https://www.linkedin.com/in/sammyjohnrawlinson">LinkedIn</a> profile.
 		  	</p>
 		</div>
 	  </section>
@@ -210,7 +231,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="project-card">
+			<!--<div class="project-card">
 				<div class="project-image">
 					<img src="./images/oldVnew.JPG" alt="First Project vs. Updated Version - HTML/CSS"/>
 				</div>
@@ -223,7 +244,7 @@
 						<a href="link-to-project" class="project-tag">Visit Project</a>
 					</div>
 				</div>
-			</div>
+			</div>-->
 			<div class="project-card">
 				<div class="project-image">
 					<img src="./images/a&h.JPG" alt="Cleaning Company Website - HTML, CSS, Bootstrap, JavaScript"/>
@@ -265,14 +286,13 @@
 			</div>
 			<label class="contact-image-label typewriter">Answer the Phone....</label>
 		</div>
-		<a class="system-reset-button" href="#top">
+		<a class="system-reset-button" href="#top" style="display: none">
 			<i class="fas fa-sync-alt"></i>System Reset...
 		</a>
 	</section>
 
-
-
-<script src="./scripts/script.js"></script>
+<script src="./scripts/navigation.js"></script>
+<script src="./scripts/system-reset.js"></script>
 </body>
 </html>
 

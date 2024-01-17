@@ -1,0 +1,12 @@
+/* _logo.scss */
+
+.Logo {
+    color: $color-interactive;
+    font-family: $font-family-header;
+    font-size: 60px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px white;
+    text-shadow: 2px 2px 4px $color-highlight;
+    vertical-align: middle;
+}
