@@ -32,6 +32,19 @@ $greeting-image-padding: 50px;
         p {
             margin-bottom: 20px;
         }
+
+        a {
+            color: $color-primary;
+            text-decoration: none;
+  
+            &:hover {
+                color: $color-interactive;
+            }
+        }
+
+        #linkedin {
+            color: $color-interactive;
+        }
     }
 
     .navigation {
